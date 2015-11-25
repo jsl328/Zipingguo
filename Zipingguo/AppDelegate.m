@@ -26,6 +26,10 @@
     NSString *documentsDirectory=[paths objectAtIndex:0];//Documents目录
     NSLog(@"沙盒路径%@",documentsDirectory);
     
+     NSLog(@"沙盒路径%@",documentsDirectory);
+     NSLog(@"沙盒路径%@",documentsDirectory);
+     NSLog(@"沙盒路径%@",documentsDirectory);
+    
     [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];

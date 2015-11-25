@@ -10,6 +10,8 @@
 	<string>Zipingguo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>83EE8CB7C6E046876E1E88969EEEBD5F8F199A36</key>
+		<string>https://github.com/jsl328/Zipingguo.git</string>
 		<key>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</key>
 		<string>svn://114.112.98.143/svnroot/IOS_Project/Zipingguo</string>
 	</dict>
@@ -17,8 +19,10 @@
 	<string>Zipingguo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</key>
+		<key>83EE8CB7C6E046876E1E88969EEEBD5F8F199A36</key>
 		<string>../..</string>
+		<key>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</key>
+		<string>../../../Zipingguo</string>
 	</dict>
 	<key>IDESourceControlProjectRepositoryRootDictionary</key>
 	<dict>
@@ -26,11 +30,11 @@
 		<string>svn://114.112.98.143</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>svn://114.112.98.143/svnroot/IOS_Project/Zipingguo/Zipingguo.xcodeproj</string>
+	<string>https://github.com/jsl328/Zipingguo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</string>
+	<string>83EE8CB7C6E046876E1E88969EEEBD5F8F199A36</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -40,6 +44,14 @@
 			<string>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Zipingguo</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>83EE8CB7C6E046876E1E88969EEEBD5F8F199A36</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Zipingguo%E5%89%AF%E6%9C%AC%202</string>
 		</dict>
 	</array>
 </dict>
