@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Qbq-8k-T2L" customClass="ZuyuanXinxiCellView">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BTu-Do-mBS">
+                    <rect key="frame" x="12" y="10" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zwv-At-rm5">
+                    <rect key="frame" x="12" y="10" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <state key="normal" image="添加成员icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClick:" destination="Qbq-8k-T2L" eventType="touchUpInside" id="qHx-9W-pm1"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cFO-7o-UfO">
+                    <rect key="frame" x="12" y="10" width="50" height="50"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <state key="normal" image="删除成员icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClick:" destination="Qbq-8k-T2L" eventType="touchUpInside" id="llG-um-hcr"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张丽" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y0Y-Kw-siX">
+                    <rect key="frame" x="11" y="68" width="52" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="O9F-T0-9EK">
+                    <rect key="frame" x="40" y="10" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <state key="normal" image="移除icon">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonClick:" destination="Qbq-8k-T2L" eventType="touchUpInside" id="doY-lA-OVS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="nameLabel" destination="Y0Y-Kw-siX" id="MvC-GO-3po"/>
+                <outlet property="shanchuButton" destination="O9F-T0-9EK" id="zPP-ni-nVh"/>
+                <outlet property="shanjianButton" destination="cFO-7o-UfO" id="CKc-Lm-tI9"/>
+                <outlet property="tianjiaChengyuanButton" destination="zwv-At-rm5" id="Oss-vJ-eW4"/>
+                <outlet property="touxiangImageFrame" destination="BTu-Do-mBS" id="w76-5j-9ar"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="删除成员icon" width="50" height="50"/>
+        <image name="添加成员icon" width="50" height="50"/>
+        <image name="移除icon" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

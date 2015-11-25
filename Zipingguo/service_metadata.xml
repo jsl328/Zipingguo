@@ -1,0 +1,2340 @@
+<ServiceMetadata>
+    
+    <!-- 此部分为底层行为设置，请勿修改。如有问题请联系相关负责人。 -->
+    <Config>
+        <Url DateParser="ymdhms" Enum="integer" />
+        <Decoder Name="json" BodyEncoding="utf-8" />
+        <Encoder Name="json" DateParser="ms" BodyEncoding="utf-8" Enum="integer" />
+        <EnumParser Name="LvpingguoEnumParser" />
+    </Config>
+    
+    <Defaults
+    IsExclusive="false"
+    CheckNetwork="true"
+    IsLoggingEnabled="true"
+    ShowWaitBox="false"
+    ShowError="false"
+    CheckPayedNetwork="true"
+    Timeout="60"
+    Network="all" />
+    
+    <Urls>
+        
+        <Url
+        Name="huanxinRestServiceUrl"
+        Value="http://123.57.7.202/huanxin/" />
+        
+        <Url
+
+        Name="huanxinRestServiceUrl16"
+        Value="http://123.57.7.202/huanxin/" />
+        <Url
+        Name="ServiceUrl"
+
+
+        Value="http://123.57.7.202/yamiapi/" /
+
+        <Url
+        Name="shangchuanZhaopianRestaServiceUrl"
+
+        Value="http://123.57.7.202/fileupload/" />
+        
+
+
+
+
+    </Urls>
+    
+    <ServiceMethods>
+        <!-- 登陆 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="login.action"
+        Parameters="phone,password,companyid"
+        Url="[ServiceUrl]user/login.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 登陆 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="login.action2"
+        Parameters="phone,password,loginType,internetType,version"
+        Url="[ServiceUrl]user/login.action"
+        ShowWaitBox="false"
+        ShowError="true"
+        Timeout="60" />
+
+
+        <!-- 获取手机验证码 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getCode.action"
+        Parameters="phone,status"
+        Url="[ServiceUrl]user/getCode.action"
+        ShowWaitBox="false"
+        ShowError="true"
+        Timeout="60" />
+        
+        <!-- 检验手机验证码 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="checkCode.action"
+        Parameters="usercode.phone,usercode.code"
+        Url="[ServiceUrl]user/checkCode.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 注册 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="register.action"
+        Parameters="phone,code,password"
+        Url="[ServiceUrl]user/register.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 完善资料 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="writeInfo.action"
+        Parameters="name,position,email,wechat,qq,birthday,jobnumber,Id,deptid"
+        Url="[ServiceUrl]user/writeInfo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 找回密码 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="findLostPsd.action"
+        Parameters="phone,password,code"
+        Url="[ServiceUrl]user/findLostPsd.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取用户详情 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyMsg.action"
+        Parameters="userid,sessionid"
+        Url="[ServiceUrl]user/getMyMsg.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 修改个人信息 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="updateUserAttr.action"
+        Parameters="key,value,userid"
+        Url="[ServiceUrl]user/updateUserAttr.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 全部动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getCompanyDynamic.action"
+        Parameters="start,count,companyid,createid,groupid"
+        Url="[ServiceUrl]dynamic/getCompanyDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- @我的动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="atMe.action"
+        Parameters="start,count,createid,groupid"
+        Url="[ServiceUrl]dynamic/atMe.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 我关注的动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="myAttentionDyn.action"
+        Parameters="start,count,createid,groupid"
+        Url="[ServiceUrl]dynamic/myAttentionDyn.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 我的动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyDynamic.action"
+        Parameters="start,count,createid,groupid"
+        Url="[ServiceUrl]dynamic/getMyDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 动态详情 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getDynamicDetail.action"
+        Parameters="id,createid"
+        Url="[ServiceUrl]dynamic/getDynamicDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 收藏动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="collectDynamic.action"
+        Parameters="userid,dynamicid"
+        Url="[ServiceUrl]dycollect/collectDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 我收藏的动态列表 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="collectionDynamicList.action"
+        Parameters="start,count,createid,groupid"
+        Url="[ServiceUrl]dynamic/collectionDynamicList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 取消收藏动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="cancelcollect"
+        Parameters="userid,dynamicid"
+        Url="[ServiceUrl]dycollect/cancelcollect.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 赞动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="praiseDynamic.action"
+        Parameters="dynamicid,createid"
+        Url="[ServiceUrl]dypraise/praiseDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 取消赞动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="cancelPraiseDynamic.action"
+        Parameters="dynamicid,createid"
+        Url="[ServiceUrl]dypraise/cancelPraiseDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 评论动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="commentDynamic.action"
+        Parameters="createid,content,dynamicid,isreply,topparid,ids"
+        Url="[ServiceUrl]dycomment/commentDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 删除动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="delMyDynamic.action"
+        Parameters="id,createid"
+        Url="[ServiceUrl]dynamic/delMyDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 关注 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="attentionPerson.action"
+        Parameters="createid,relid"
+        Url="[ServiceUrl]attention/attentionPerson.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 取消关注 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="cancelAttention.action"
+        Parameters="createid,relid"
+        Url="[ServiceUrl]attention/cancelAttention.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 发表动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="POST"
+        Name="publishDynamic.action"
+        Parameters="/~"
+        Url="[ServiceUrl]dynamic/publishDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!-- 群组发表动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="POST"
+        Name="publishDynamic"
+        Parameters="/~"
+        Url="[ServiceUrl]dynamic/publishDynamic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 上传图片 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="POST"
+        IsExclusive="false"
+        Name="Base64UploadServlet"
+        Parameters="/imgName,imgStr"
+        Url="[shangchuanZhaopianRestaServiceUrl]Base64UploadServlet"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 通知列表 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getPage.action"
+        Parameters="companyid,userid,start,count"
+        Url="[ServiceUrl]notice/getPage.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取@我的评论 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="atMeNotice.action"
+        Parameters="userid,start,count"
+        Url="[ServiceUrl]notice/atMeNotice.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 通知详情 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="noticeDetail.action"
+        Parameters="id,userid"
+        Url="[ServiceUrl]notice/noticeDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 收藏通知 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="collectNotice.action"
+        Parameters="userid,noticeid"
+        Url="[ServiceUrl]noticecollect/collectNotice.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 按名称搜索通知 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchNoticeByTitle.action"
+        Parameters="companyid,title,userid"
+        Url="[ServiceUrl]notice/searchNoticeByTitle.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 通讯录列表 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getCompanyPersons.action"
+        Parameters="companyid,start,count,priorityyouxianji"
+        Url="[ServiceUrl]user/getCompanyPersons2.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 子部门&成员接口 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getSubDeptAndMemberUser.action"
+        Parameters="id,memo"
+        Url="[ServiceUrl]dept/getSubDeptAndMemberUser.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 部门列表 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getCompanyDepts.action"
+        Parameters="companyid"
+        Url="[ServiceUrl]dept/getCompanyDepts.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        <!-- 部门列表 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getCompanyDeptlist.action"
+        Parameters="companyid"
+        Url="[ServiceUrl]dept/getCompanyDeptlist.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 部门下的同事列表 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getDeptPersons.action"
+        Parameters="id"
+        Url="[ServiceUrl]dept/getDeptPersons.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 部门下的联系人信息 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getPersonDetail.action"
+        Parameters="userid"
+        Url="[ServiceUrl]dept/getPersonDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 查询通讯录下的联系人信息 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchCompanyPerson.action"
+        Parameters="companyid,name,deptid"
+        Url="[ServiceUrl]user/searchCompanyPerson.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 判断通讯录是否要更新 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="POST"
+        Name="updateCompanyPersons.action"
+        Parameters="/~"
+        Url="[ServiceUrl]user/updateCompanyPersons.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 审批列表 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyApplyApproval.action"
+        Parameters="start,count,dealid"
+        Url="[ServiceUrl]apply/getMyApplyApproval.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 审批列表 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyApplyList.action"
+        Parameters="start,count,createid"
+        Url="[ServiceUrl]apply/getMyApplyList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 申请、审批详情 -->
+        <!-- 责任人：蒋世林 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getApplyDetail.action"
+        Parameters="id"
+        Url="[ServiceUrl]apply/getApplyDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 申请、审批详情 -->
+        <!-- 责任人：蒋世林 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getApplyDetail.action"
+        Parameters="id"
+        Url="[ServiceUrl]apply/getApplyDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 申请类型列表 -->
+        <!-- 责任人：蒋世林 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getAllFlow.action"
+        Parameters="companyid"
+        Url="[ServiceUrl]flow/getAllFlow.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 创建申请列表 -->
+        <!-- 责任人：蒋世林 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getReqNote.action"
+        Parameters="flowid"
+        Url="[ServiceUrl]flowitem/getReqNote.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 重置密码-验证老密码 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="resetPwdCheckOldPwd.action"
+        Parameters="userid,password"
+        Url="[ServiceUrl]user/resetPwdCheckOldPwd.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 重置密码-设置新密码 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="resetPwd.action"
+        Parameters="userid,password,oldPassword"
+        Url="[ServiceUrl]user/resetPwd.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 重置手机号 -->
+        <!-- 责任人：http://123.57.7.202 -->
+        <ServiceMethod
+        Method="GET"
+        Name="resetPhone.action"
+        Parameters="userid,phone,oldPassword"
+        Url="[ServiceUrl]user/resetPhone.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--获得新消息提醒设置 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getOption.action"
+        Parameters="user.userid,user.companyid"
+        Url="[ServiceUrl]usermsgoption/getOption.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 新消息提醒设置 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="setOption.action"
+        Parameters="userid,msgoptionid,status"
+        Url="[ServiceUrl]usermsgoption/setOption.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 签到 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="signIn.action"
+        Parameters="id,createid,ontime,onaddress"
+        Url="[ServiceUrl]attendance/signIn.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 签退 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="signOut.action"
+        Parameters="id,createid,offtime,offaddress"
+        Url="[ServiceUrl]attendance/signOut.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 快速签到 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="quickSign.action"
+        Parameters="createid,onaddress,companyid"
+        Url="[ServiceUrl]attendance/quickSign.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+
+
+        
+        <!-- 备注 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="editMemo.action"
+        Parameters="id,memo"
+        Url="[ServiceUrl]attendance/editMemo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 保存外出记录 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="POST"
+        Name="save.action2"
+        Parameters="/~"
+        Url="[ServiceUrl]goout/save.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取今日考勤记录 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getAttendanceRecord.action_today"
+        Parameters="createid,istoday"
+        Url="[ServiceUrl]attendance/getAttendanceRecord.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取考勤记录 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getAttendanceRecord.action"
+        Parameters="createid,start,count,istoday"
+        Url="[ServiceUrl]attendance/getAttendanceRecord.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取外出记录 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getGooutRecord.action"
+        Parameters="createid,start,count"
+        Url="[ServiceUrl]goout/getGooutRecord.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取外出和打卡记录 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getGooutAndAttendRecord1.action"
+        Parameters="createid,start,count"
+        Url="[ServiceUrl]goout/getGooutAndAttendRecord1.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取考勤记录的详情信息 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getGooutInfo.action"
+        Parameters="id"
+        Url="[ServiceUrl]goout/getGooutInfo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 考勤详情 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getDetail.action"
+        Parameters="createid"
+        Url="[ServiceUrl]attendance/getDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取我的群组列表 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyGroups.action"
+        Parameters="createid,start,count"
+        Url="[ServiceUrl]group/getMyGroups.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 搜索我的群组列表 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchMyGroups.action"
+        Parameters="createid,start,count,title"
+        Url="[ServiceUrl]group/searchMyGroups.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取群组下的成员 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getGroupUsers.action"
+        Parameters="start,count,groupid"
+        Url="[ServiceUrl]groupuser/getGroupUsers.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 搜索群组下的成员 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchGroupUsers.action"
+        Parameters="start,count,groupid,username"
+        Url="[ServiceUrl]groupuser/searchGroupUsers.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取群组下的文档 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getGroupDocs.action"
+        Parameters="groupid,start,count"
+        Url="[ServiceUrl]groupdoc/getGroupDocs.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 环信 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getTokenCommon"
+        Parameters="appkey,username,password"
+        Url="[huanxinRestServiceUrl]GetTokenCommon"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取环信管理员Token -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="GetToken"
+        Parameters="appkey,username,password"
+        Url="[huanxinRestServiceUrl]GetToken"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取一个用户参与的所有群组 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="GetJoinedChatgroups"
+        Parameters="appkey,username,token"
+        Url="[huanxinRestServiceUrl]GetJoinedChatgroups"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 创建一个用户参与的公开群组 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="CreateChatgroups"
+        Parameters="appkey,groupname,token,desc,owner,ispublic,members,approval"
+        Url="[huanxinRestServiceUrl]CreateChatgroups"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取一个群组的成员id -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="GetUsersByGroupId"
+        Parameters="appkey,groupid,token"
+        Url="[huanxinRestServiceUrl]GetUsersByGroupId"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 根据环信用户名信息获得其他信息 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getUserinfoByHxuname.action"
+        Parameters="ids"
+        Url="[ServiceUrl]user/getUserinfoByHxuname.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取文件列表 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="GET"
+        Name="getList.action"
+        Parameters="url,createid,companyid"
+        Url="[ServiceUrl]repository/getList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 搜索文件 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchFile.action"
+        Parameters="url,name,createid,companyid"
+        Url="[ServiceUrl]repository/searchFile.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 创建文件夹 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="GET"
+        Name="creatte.action"
+        Parameters="url,name,createid,companyid"
+        Url="[ServiceUrl]repository/create.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 删除文件 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="GET"
+        Name="delete.action1"
+        Parameters="url,createid,companyid,createname"
+        Url="[ServiceUrl]repository/delete.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 重命名文件 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="GET"
+        Name="renameFile.action"
+        Parameters="url,rename,createid,companyid,createname"
+        Url="[ServiceUrl]repository/rename.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 移动文件 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="GET"
+        Name="move.action"
+        Parameters="from,to,createid,companyid,createname"
+        Url="[ServiceUrl]repository/move.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 上传文件 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="POST"
+        Name="UploadServiet"
+        Parameters="/imgName,imgStr,url,createtid,companyid,createname"
+        Url="[shangchuanZhaopianRestaServiceUrl]Base64UploadServlet"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 下载文件夹 -->
+        <!-- 责任人：c -->
+        <ServiceMethod
+        Method="GET"
+        Name="getNotDirFileList.action"
+        Parameters="url,createid,companyid"
+        Url="[ServiceUrl]repository/getNotDirFileList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!--我的任务(待办或者已完成)-->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyTasks.action"
+        Parameters="createid,start,count"
+        Url="[ServiceUrl]task/getMyTasks.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--搜索我的任务-->
+        <ServiceMethod
+        Method="GET"
+        Name="searchMyTasks.action"
+        Parameters="createid,isfinish,start,count,title"
+        Url="[ServiceUrl]task/searchMyTasks.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--搜索我分配的任务-->
+        <ServiceMethod
+        Method="GET"
+        Name="myAllotTask.action"
+        Parameters="createid,isfinish,start,count,title"
+        Url="[ServiceUrl]task/myAllotTask.action"
+        ShowWaitBox="true"
+        Timeout="60" />
+        
+        <!--创建新的任务-->
+        <ServiceMethod
+        Method="POST"
+        IsExclusive="false"
+        Name="createTask.action"
+        Parameters="/~"
+        Url="[ServiceUrl]task/createTask.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        <!--任务详情-->
+        <ServiceMethod
+        Method="GET"
+        Name="taskDetail.action"
+        Parameters="id,createid"
+        Url="[ServiceUrl]task/taskDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--任务标记为未完成-->
+        <ServiceMethod
+        Method="GET"
+        Name="markUnfinish.action"
+        Parameters="id"
+        Url="[ServiceUrl]task/markUnfinish.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--复制任务到待办-->
+        <ServiceMethod
+        Method="GET"
+        Name="copyToTodo.action"
+        Parameters="id,createid"
+        Url="[ServiceUrl]task/copyToTodo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--删除任务-->
+        <ServiceMethod
+        Method="GET"
+        Name="delTask.action"
+        Parameters="id"
+        Url="[ServiceUrl]task/delTask.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--任务标记为已完成-->
+        <ServiceMethod
+        Method="GET"
+        Name="markFinish.action"
+        Parameters="id"
+        Url="[ServiceUrl]task/markFinish.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--获取我分配的任务-->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyAllotTask.action"
+        Parameters="createid,start,count"
+        Url="[ServiceUrl]task/getMyAllotTask.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--任务评论-->
+        <ServiceMethod
+        Method="GET"
+        Name="commentTask.action"
+        Parameters="createid,content,taskid,isreply,topparid,ids"
+        Url="[ServiceUrl]taskcomment/commentTask.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--更新任务详情的任务列表-->
+        
+        
+        <ServiceMethod
+        Method="POST"
+        Name="updateTaskItem.action"
+        Parameters="/~"
+        Url="[ServiceUrl]task/updateTaskItem.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!--更新任务详情的某个单独字段-->
+        <ServiceMethod
+        Method="GET"
+        Name="updateTaskColumn.action"
+        Parameters="id,key,value,createid"
+        Url="[ServiceUrl]task/updateTaskColumn.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--创建一条快捷任务-->
+        <ServiceMethod
+        Method="GET"
+        Name="createQuickTask.action"
+        Parameters="title,createid,companyid"
+        Url="[ServiceUrl]task/createQuickTask.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--编辑负责人或者参与人-->
+        <ServiceMethod
+        Method="GET"
+        Name="updateDuty.action"
+        Parameters="ids,taskid,type"
+        Url="[ServiceUrl]taskduty/updateDuty.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--点击设置任务子项为完成-->
+        <ServiceMethod
+        Method="GET"
+        Name="setIfFinish.action"
+        Parameters="id,isfinish,finishid"
+        Url="[ServiceUrl]taskitem/setIfFinish.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--修改或者添加任务子项-->
+        <ServiceMethod
+        Method="GET"
+        Name="updateSingleTaskItem.action"
+        Parameters="taskid,content,id"
+        Url="[ServiceUrl]taskitem/updateSingleTaskItem.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!-- 搜索提交给我的工作报告 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchSubmitToMePaper.action"
+        Parameters="userid,searchstr,papertype"
+        Url="[ServiceUrl]workpaper/searchSubmitToMePaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告按部门排序 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitWorkPaperToMeDeptSort.action"
+        Parameters="workpaperUser.userid,workpaperUser.papertype,workpaperUser.start,workpaperUser.count"
+        Url="[ServiceUrl]workpaper/submitPaperToMeDeptSort.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告按部门排序获取部门 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="haveSubmitPaperToMeDept.action"
+        Parameters="workpaperUser.userid,workpaperUser.papertype"
+        Url="[ServiceUrl]workpaper/haveSubmitPaperToMeDept.action"
+        ShowWaitBox="true"
+        Timeout="100" />
+        
+        <!-- 工作报告按部门排序获取日报 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitPaperToMeDeptSort.action1"
+        Parameters="userid,papertype,deptid,start,count"
+        Url="[ServiceUrl]workpaper/submitPaperToMeDeptSort1.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告按人名排序 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitGongzuoPaperToMeUnameSort.action"
+        Parameters="workpaperUser.userid,workpaperUser.papertype,workpaperUser.start,workpaperUser.count"
+        Url="[ServiceUrl]workpaper/submitPaperToMeUnameSort.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告按人名排序获取人名 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="haveSubmitPaperToMeUname.action"
+        Parameters="workpaperUser.userid,workpaperUser.papertype"
+        Url="[ServiceUrl]workpaper/haveSubmitPaperToMeUname.action"
+        ShowWaitBox="true"
+        Timeout="60" />
+        
+        <!-- 工作报告按人名排序获取工作报告 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitPaperToMeUnameSort.action1"
+        Parameters="userid,papertype,createid,start,count"
+        Url="[ServiceUrl]workpaper/submitPaperToMeUnameSort1.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 新建月报 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="POST"
+        Name="workpaper.action"
+        Parameters="/~"
+        Url="[ServiceUrl]workpaper/createPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 我提交的工作报告列表 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="mySubmitPaper.action"
+        Parameters="createid,papertype,start,count,createtime"
+        Url="[ServiceUrl]workpaper/mySubmitPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!-- 提交给我的工作报告列表 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitYuePaperToMe.action"
+        Parameters="workpaperUser.userid,workpaperUser.papertype,workpaperUser.start,workpaperUser.count,workpaperUser.createtime"
+        Url="[ServiceUrl]workpaper/submitPaperToMe.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告详情 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="paperDetail.action"
+        Parameters="id,userid"
+        Url="[ServiceUrl]workpaper/paperDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告下 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="nextPaper.action"
+        Parameters="id,userid,papertype"
+        Url="[ServiceUrl]workpaper/nextPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告上 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="previouPaper.action"
+        Parameters="id,userid,papertype"
+        Url="[ServiceUrl]workpaper/previouPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 工作报告评论 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="commentPaper.action"
+        Parameters="createid,content,workpaperid,isreply,topparid,ids"
+        Url="[ServiceUrl]workpaperComment/commentPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        
+        <!-- 新建日报 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="POST"
+        Name="create.action"
+        Parameters="/~"
+        Url="[ServiceUrl]dailypaper/create.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 我提交的日报列表 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="mySubmitDailyPaper.action"
+        Parameters="createid,start,count,createtime"
+        Url="[ServiceUrl]dailypaper/mySubmitDailyPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        <!-- 搜索提交给我的日报列表 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchSubmitToMeDailyPaper.action"
+        Parameters="userid,searchstr"
+        Url="[ServiceUrl]dailypaper/searchSubmitToMeDailyPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        <!-- 提交给我的日报列表 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitPaperToMe.action"
+        Parameters="dailyuser.userid,dailyuser.start,dailyuser.count,dailyuser.createtime"
+        Url="[ServiceUrl]dailypaper/submitPaperToMe.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 日报详情 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="dailyPaperDetail.action"
+        Parameters="id,userid"
+        Url="[ServiceUrl]dailypaper/dailyPaperDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 日报评论 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="commentDaily.action"
+        Parameters="createid,content,dailypaperid,isreply,topparid,ids"
+        Url="[ServiceUrl]dailycomment/commentDaily.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 新建周报 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="POST"
+        Name="create1.action"
+        Parameters="/~"
+        Url="[ServiceUrl]weekpaper/create.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 我提交的周报 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="mySubmitWeekPaper.action"
+        Parameters="createid,start,count"
+        Url="[ServiceUrl]weekpaper/mySubmitWeekPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 提交给我的周报 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitWeekPaperToMe.action"
+        Parameters="weekuser.userid,weekuser.start,weekuser.count"
+        Url="[ServiceUrl]weekpaper/submitPaperToMe.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        <!--搜索提交给我的周报 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="searchSubmitToMeWeekPaper.action"
+        Parameters="userid,searchstr"
+        Url="[ServiceUrl]weekpaper/searchSubmitToMeWeekPaper.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 周报详情 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="weekPaperDetail.action"
+        Parameters="id,userid"
+        Url="[ServiceUrl]weekpaper/weekPaperDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 周报评论 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="commentWeek.action"
+        Parameters="createid,content,weekpaperid,isreply,topparid,ids"
+        Url="[ServiceUrl]weekcomment/commentWeek.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 提交给我的日报列表(按部门排序) -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitPaperToMeDeptSort.action"
+        Parameters="dailyuser.userid,dailyuser.start,dailyuser.count"
+        Url="[ServiceUrl]dailypaper/submitPaperToMeDeptSort.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 描述接口 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="getPaperDescription.action"
+        Parameters="papertype"
+        Url="[ServiceUrl]workpaper/getPaperDescription.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!-- 提交给我的周报列表(按部门排序) -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitWeekPaperToMeDeptSort.action"
+        Parameters="weekuser.userid,weekuser.start,weekuser.count"
+        Url="[ServiceUrl]dailypaper/submitPaperToMeDeptSort.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!-- 提交给我的周报列表(按人员排序) -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitWeekPaperToMeUnameSort.action"
+        Parameters="weekuser.userid,weekuser.start,weekuser.count"
+        Url="[ServiceUrl]dailypaper/submitPaperToMeUnameSort.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 提交给我的周报列表(按人员排序) -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="submitWeekPaperToMeUnameSort.action"
+        Parameters="weekuser.userid,weekuser.start,weekuser.count"
+        Url="[ServiceUrl]dailypaper/submitPaperToMeUnameSort.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 批准和不批准 签名可以未空-->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="operateFlowRecord.action"
+        Parameters="dealid,status,applyid,content,passid,handwriteurl"
+        Url="[ServiceUrl]applyrecord/operateFlowRecord.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!-- 提交申请 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="POST"
+        Name="create.action"
+        Parameters="/~"
+        Url="[ServiceUrl]apply/create.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 修改申请 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="POST"
+        Name="updateApply.action"
+        Parameters="/~"
+        Url="[ServiceUrl]apply/updateApply.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 删除申请 -->
+        <!-- 责任人：xm -->
+        <ServiceMethod
+        Method="GET"
+        Name="deleteApply.action"
+        Parameters="id"
+        Url="[ServiceUrl]apply/deleteApply.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 群组全部动态 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getDynamicOfGroup.action"
+        Parameters="groupid,start,count,createid"
+        Url="[ServiceUrl]dynamic/getDynamicOfGroup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取某一天的任务 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getThingOfDay.action"
+        Parameters="userid,daytime"
+        Url="[ServiceUrl]userCalendar/getThingOfDay.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.8.7	查询日历所有事件 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getThingOfMonth.action"
+        Parameters="userid"
+        Url="[ServiceUrl]calendar/getThings.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 在日历里创建备忘录 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="createMemo.action"
+        Parameters="userid,title,remindmsg,companyid,content,endtime"
+        Url="[ServiceUrl]calendar/createMemo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 在日历里删除备忘录 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="deleteMemo.action"
+        Parameters="id"
+        Url="[ServiceUrl]calendar/deleteMemo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 在日历里修改备忘录 -->
+        <!-- 责任人：解萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="updateMemo.action"
+        Parameters="id,title,remindmsg,content,endtime"
+        Url="[ServiceUrl]calendar/updateMemo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--获取资讯类别-->
+        <ServiceMethod
+        Method="GET"
+        Name="getInfoType.action"
+        Parameters="companyid"
+        Url="[ServiceUrl]infotype/getInfoType.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--获取类别下的资讯列表-->
+        <ServiceMethod
+        Method="GET"
+        Name="getInfoByType.action"
+        Parameters="infoType.id,infoType.start,infoType.count"
+        Url="[ServiceUrl]information/getInfoByType.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--最新资讯列表-->
+        <ServiceMethod
+        Method="GET"
+        Name="getNewInfoList.action"
+        Parameters="start,count"
+        Url="[ServiceUrl]information/getNewInfoList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--获取资讯详情-->
+        <ServiceMethod
+        Method="GET"
+        Name="getInfoDetail.action"
+        Parameters="id,createid"
+        Url="[ServiceUrl]information/getInfoDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--资讯评论-->
+        <ServiceMethod
+        Method="GET"
+        Name="comment.action"
+        Parameters="createid,content,infoid,isreply,topparid,ids"
+        Url="[ServiceUrl]infocomment/comment.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--获得资讯评论列表-->
+        <ServiceMethod
+        Method="GET"
+        Name="getInfoCommentList.action"
+        Parameters="infoid"
+        Url="[ServiceUrl]infocomment/getInfoCommentList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--收藏资讯-->
+        <ServiceMethod
+        Method="GET"
+        Name="collectInfo.action"
+        Parameters="userid,infoid"
+        Url="[ServiceUrl]infocollect/collectInfo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--收藏资讯列表-->
+        <ServiceMethod
+        Method="GET"
+        Name="collectInfoList.action"
+        Parameters="userid,start,count"
+        Url="[ServiceUrl]infocollect/collectInfoList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--取消收藏资讯-->
+        <ServiceMethod
+        Method="GET"
+        Name="cancelcollect.action1"
+        Parameters="userid,infoid"
+        Url="[ServiceUrl]infocollect/cancelcollect.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--意见反馈-->
+        <ServiceMethod
+        Method="GET"
+        Name="createFeedback.action"
+        Parameters="feedback.userid,feedback.content"
+        Url="[ServiceUrl]setting/createFeedback.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--版本更新-->
+        <ServiceMethod
+        Method="GET"
+        Name="updateVersion.action"
+        Parameters="version.platform"
+        Url="[ServiceUrl]setting/updateVersion.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--获取用户左侧红点状态码-->
+        <ServiceMethod
+        Method="GET"
+        Name="getUserReddot.action"
+        Parameters="userid"
+        Url="[ServiceUrl]reddot/getUserReddot.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--重置左侧红点状态码-->
+        <ServiceMethod
+        Method="GET"
+        Name="resetUserAttr.action"
+        Parameters="userid,key"
+        Url="[ServiceUrl]reddot/resetUserAttr.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--左侧红点状态码减1-->
+        <ServiceMethod
+        Method="GET"
+        Name="decreaseReddot.action"
+        Parameters="userid,key"
+        Url="[ServiceUrl]reddot/decreaseReddot.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--添加图片-->
+        <ServiceMethod
+        Method="GET"
+        Name="addImg.action"
+        Parameters="taskid,imgurl"
+        Url="[ServiceUrl]taskimg/addImg.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--删除图片-->
+        <ServiceMethod
+        Method="GET"
+        Name="delImg.action"
+        Parameters="taskid,imgurl"
+        Url="[ServiceUrl]taskimg/delImg.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--创建群组-->
+        <ServiceMethod
+        Method="POST"
+        Name="createGroup.action"
+        Parameters="/~"
+        Url="[ServiceUrl]group/createGroup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--加入群组-->
+        <ServiceMethod
+        Method="GET"
+        Name="joinGroup.action"
+        Parameters="groupid,userid"
+        Url="[ServiceUrl]groupuser/joinGroup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--离开群组-->
+        <ServiceMethod
+        Method="GET"
+        Name="leaveGroup.action"
+        Parameters="groupid,userid"
+        Url="[ServiceUrl]groupuser/leaveGroup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--修改群组名称-->
+        <ServiceMethod
+        Method="GET"
+        Name="editGroup.action"
+        Parameters="id,title"
+        Url="[ServiceUrl]group/editGroup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--修改群组说明-->
+        <ServiceMethod
+        Method="GET"
+        Name="editGroup.action1"
+        Parameters="id,about"
+        Url="[ServiceUrl]group/editGroup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--查看群组信息-->
+        <ServiceMethod
+        Method="GET"
+        Name="getGroupDetail.action"
+        Parameters="id"
+        Url="[ServiceUrl]group/getGroupDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--知识库文件上传 -->
+        <ServiceMethod
+        Method="POST"
+        Name="WebUploadFileServlet"
+        Parameters="url,companyid,filename,createid,fileMaxLength,fileStartUploadLength,savename"
+        Url="[ServiceUrl]fileupload/MobileUploadServlet"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        
+        <!--个人通讯录 添加-->
+        <ServiceMethod
+        Method="POST"
+        Name="addCustomer.action"
+        Parameters="/~"
+        Url="[ServiceUrl]customer/addCustomer.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 导入-->
+        <ServiceMethod
+        Method="POST"
+        Name="importCustomer.action"
+        Parameters="/~"
+        Url="[ServiceUrl]customer/importCustomer.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 获取客户-->
+        <ServiceMethod
+        Method="GET"
+        Name="getAllCustomer.action"
+        Parameters="companyid,start,count"
+        Url="[ServiceUrl]customer/getAllCustomer.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 获取客户By公司-->
+        <ServiceMethod
+        Method="GET"
+        Name="getAllCustomerSortByCompany.action"
+        Parameters="companyid,start,count"
+        Url="[ServiceUrl]customer/getAllCustomerSortByCompany.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 搜索客户-->
+        <ServiceMethod
+        Method="GET"
+        Name="searchCustomer.action"
+        Parameters="companyid,name"
+        Url="[ServiceUrl]customer/searchCustomer.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 获取客户详情-->
+        <ServiceMethod
+        Method="GET"
+        Name="getCustomerDetail.action"
+        Parameters="id"
+        Url="[ServiceUrl]customer/getCustomerDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 修改客户基本信息-->
+        <ServiceMethod
+        Method="GET"
+        Name="editCustomer.action"
+        Parameters="id,name,mobile,mail,memo,companyname,basemsg,address,imgurl"
+        Url="[ServiceUrl]customer/editCustomer.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 添加跟进计划-->
+        <ServiceMethod
+        Method="POST"
+        Name="addCustomerFollowup.action"
+        Parameters="/~"
+        Url="[ServiceUrl]customer/addCustomerFollowup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 获取跟进计划详情-->
+        <ServiceMethod
+        Method="GET"
+        Name="getFollowupDetail.action"
+        Parameters="followup.id"
+        Url="[ServiceUrl]customer/getFollowupDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 修改跟进计划-->
+        <ServiceMethod
+        Method="POST"
+        Name="editFollowup.action"
+        Parameters="/~"
+        Url="[ServiceUrl]customer/editFollowup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--个人通讯录 删除跟进计划-->
+        <ServiceMethod
+        Method="GET"
+        Name="delFollowup.action"
+        Parameters="followup.id"
+        Url="[ServiceUrl]customer/delFollowup.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--催收列表 -->
+        <ServiceMethod
+        Method="GET"
+        Name="list.action"
+        Parameters="orderby,start,count,customername,createid"
+        Url="[ServiceUrl]overdue/list.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--立即催收 -->
+        <ServiceMethod
+        Method="GET"
+        Name="updateCount.action"
+        Parameters="id"
+        Url="[ServiceUrl]overdue/updateCount.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--催收详情 -->
+        <ServiceMethod
+        Method="GET"
+        Name="get.action"
+        Parameters="id,createid"
+        Url="[ServiceUrl]overdue/get.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--添加催收信息 -->
+        <ServiceMethod
+        Method="POST"
+        Name="create.action1"
+        Parameters="/~"
+        Url="[ServiceUrl]overdue/create.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--修改催收记录的某个字段 -->
+        <ServiceMethod
+        Method="GET"
+        Name="update.action"
+        Parameters="id,customerid,customername,mobile,arrear,repaytype,period,repaytime,overduetype,smscontent,overduetime,status,collection,contracttype,contractcount,starttime,endtime,isremind,remindtime,memo"
+        Url="[ServiceUrl]overdue/update.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--修改催收记录的某个字段ForiOS -->
+        <ServiceMethod
+        Method="POST"
+        Name="updateForIOS.action"
+        Parameters="/~"
+        Url="[ServiceUrl]overdue/updateForIOS.action"
+        ShowWaitBox="false"
+        Timeout="15" />
+        
+        <!--添加担保人 -->
+        <ServiceMethod
+        Method="GET"
+        Name="overdueAdd.action"
+        Parameters="overdueid,customerid,customername"
+        Url="[ServiceUrl]security/add.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--删除担保人 -->
+        <ServiceMethod
+        Method="GET"
+        Name="overdueDelete"
+        Parameters="id"
+        Url="[ServiceUrl]security/delete.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--首页 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getHomeContent.action"
+        Parameters="createid"
+        Url="[ServiceUrl]home/getHomeContent.action"
+        ShowWaitBox="false"
+        ShowError="true"
+        Timeout="60" />
+
+        <!--首页  解萌修改-->
+        <ServiceMethod
+        Method="GET"
+        Name="getHomeContentV2.action"
+        Parameters="createid"
+        Url="[ServiceUrl]home/getHomeContentV2.action"
+        ShowWaitBox="false"
+        ShowError="true"
+        Timeout="60" />
+
+
+        <!--首页 将群组，资讯，知识库设为已读 -->
+        <ServiceMethod
+        Method="GET"
+        Name="swipeToRead.action"
+        Parameters="id,createid,type"
+        Url="[ServiceUrl]home/swipeToRead.action"
+        ShowWaitBox="false"
+        ShowError="false"
+        Timeout="10" />
+        
+        <!--首页 将评论消息设为已读 -->
+        <ServiceMethod
+        Method="GET"
+        Name="setCommentToRead.action"
+        Parameters="createid,id"
+        Url="[ServiceUrl]home/setCommentToRead.action"
+        ShowWaitBox="false"
+        ShowError="false"
+        Timeout="60" />
+
+        <!--退出登录 -->
+        <ServiceMethod
+        Method="GET"
+        Name="logout.action"
+        Parameters="id"
+        Url="[ServiceUrl]user/logout.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        <!--咨询点赞 -->
+        <ServiceMethod
+        Method="GET"
+        Name="praise.action"
+        Parameters="createid,infoid,createname"
+        Url="[ServiceUrl]infopraise/praise.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        <!--取消咨询点赞 -->
+        <ServiceMethod
+        Method="GET"
+        Name="cancelPraise.action"
+        Parameters="createid,infoid"
+        Url="[ServiceUrl]infopraise/cancelPraise.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+
+        
+        <!--国融添加-->
+        <!--提交手机号 -->
+        <ServiceMethod
+        Method="GET"
+        Name="registerG.action"
+        Parameters="phone"
+        Url="[ServiceUrl]user/registerG.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--注册的提交资料 -->
+        <ServiceMethod
+        Method="GET"
+        Name="writeInfoG.action"
+        Parameters="id,name,position,email,jobnumber,companyname,password,phone"
+        Url="[ServiceUrl]user/writeInfoG.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--添加部门 -->
+        <ServiceMethod
+        Method="GET"
+        Name="addG.action"
+        Parameters="companyid,deptnames"
+        Url="[ServiceUrl]dept/addG.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+
+        <!--用户登录 -->
+        <ServiceMethod
+        Method="GET"
+        Name="loginG.action"
+        Parameters="phone,password,loginType,internetType,version"
+        Url="[ServiceUrl]user/loginG.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--解除公司 -->
+        <ServiceMethod
+        Method="GET"
+        Name="relieveG.action"
+        Parameters="phone,companyid"
+        Url="[ServiceUrl]user/relieveG.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.1.1  获取提交给我的机票订单 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getToMeOrder.action"
+        Parameters="start,count,payerid"
+        Url="[ServiceUrl]ticketOrder/getToMeOrder.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.1.2  获取我提交的待支付详情 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getOrderDetail.action"
+        Parameters="id"
+        Url="[ServiceUrl]ticketOrder/getOrderDetail.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.1.3	拒绝支付 -->
+        <ServiceMethod
+        Method="GET"
+        Name="refuse.action"
+        Parameters="id,memo"
+        Url="[ServiceUrl]ticketOrder/refuse.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.1.4	现在支付 -->
+        <ServiceMethod
+        Method="GET"
+        Name="agree.action"
+        Parameters="id"
+        Url="[ServiceUrl]ticketOrder/agree.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.1.5	我提交的机票订单 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMyOrder.action"
+        Parameters="start,count,createid"
+        Url="[ServiceUrl]ticketOrder/getMyOrder.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.1.6	重新提交此订单 -->
+        <ServiceMethod
+        Method="GET"
+        Name="reSubmit.action"
+        Parameters="id"
+        Url="[ServiceUrl]ticketOrder/reSubmit.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.1.7	删除此订单 -->
+        <ServiceMethod
+        Method="GET"
+        Name="delete.action"
+        Parameters="id"
+        Url="[ServiceUrl]ticketOrder/delete.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.1	获取机票历史记录 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getUserList.action"
+        Parameters="userid"
+        Url="[ServiceUrl]orderhistory/getUserList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.2	清除机票历史记录 -->
+        <ServiceMethod
+        Method="GET"
+        Name="deleteUserHis.action"
+        Parameters="userid"
+        Url="[ServiceUrl]orderhistory/deleteUserHis.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.3	成人票查询 -->
+        <ServiceMethod
+        Method="GET"
+        Name="JPSearch"
+        Parameters="dptCity,dstCity,departureDate,returnDate,airLine,isDirect,flightType,flightNo,sort"
+        Url="[ServiceUrl]TicketBooking/search"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.4	儿童票价查询 -->
+        <ServiceMethod
+        Method="GET"
+        Name="enfantPrice"
+        Parameters="dptCity,dstCity,departureDate,arrivalTime,flightNo,cabin,planeType,baseCabin,baseCabinPrice,airline"
+        Url="[ServiceUrl]TicketBooking/enfantPrice"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.5	保存机票信息 -->
+        <ServiceMethod
+        Method="POST"
+        Name="saveTic.action"
+        Parameters="/~"
+        Url="[ServiceUrl]ticket/saveTic.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.6	获取历史乘机人 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getHistory.action"
+        Parameters="createid"
+        Url="[ServiceUrl]contact/list.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.7	新增乘机人 -->
+        <ServiceMethod
+        Method="GET"
+        Name="JP_add.action"
+        Parameters="psgName,psgType,idType,idNo,createid,contactPhone"
+        Url="[ServiceUrl]contact/add.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.8	修改乘机人 -->
+        <ServiceMethod
+        Method="GET"
+        Name="JP_update.action"
+        Parameters="psgName,psgType,idType,idNo,id"
+        Url="[ServiceUrl]contact/update.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.9	保存订单 -->
+        <ServiceMethod
+        Method="POST"
+        Name="JPSave.action"
+        Parameters="/~"
+        Url="[ServiceUrl]ticketOrder/save.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.10	获取城市信息 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getJPCitylist.action"
+        Parameters="cityCode,cityNameCn,cityNameEn,nameInitial,cityCode"
+        Url="[ServiceUrl]geography/getlist.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.11	获取该用户所有的差旅计划 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getApplyList.action"
+        Parameters="createid,companyid"
+        Url="[ServiceUrl]apply/getApplyList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--1.2.12	提交乘机人 -->
+        <ServiceMethod
+        Method="GET"
+        Name="Passenger_submit.action"
+        Parameters="orderId,ids"
+        Url="[ServiceUrl]passenger/submit.action"
+        ShowWaitBox="false"
+        ShowError="true"
+        Timeout="60" />
+
+        <!--1.2.13	保存机票信息2 -->
+        <ServiceMethod
+        Method="GET"
+        Name="saveTic_GET.action"
+        Parameters="dptCity,dstCity,departureDate,returnDate,airLine,isDirect,flightType,flightNo,sort,orderId,num"
+        Url="[ServiceUrl]ticket/saveTicByRemote.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+
+
+        <!--删除动态评论 -->
+        <ServiceMethod
+        Method="GET"
+        Name="dyDel.action"
+        Parameters="createid,id,dynamicid"
+        Url="[ServiceUrl]dycomment/del.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+
+    
+         <!--删除任务评论 -->
+         <ServiceMethod
+         Method="GET"
+         Name="delTaskcomment.action"
+         Parameters="createid,id"
+         Url="[ServiceUrl]taskcomment/del.action"
+         ShowWaitBox="false"
+         Timeout="60" />
+
+        
+        <!--删除工作报告评论 -->
+        <ServiceMethod
+        Method="GET"
+        Name="workPaperDel.action"
+        Parameters="createid,id"
+        Url="[ServiceUrl]workpaperComment/del.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--删除资讯评论 -->
+        <ServiceMethod
+        Method="GET"
+        Name="infoDel.action"
+        Parameters="createid,id"
+        Url="[ServiceUrl]infocomment/del.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!--判断是否是管理员  -->
+        <ServiceMethod
+        Method="GET"
+        Name="judgePower.action"
+        Parameters="id,ext3"
+        Url="[ServiceUrl]company/judgePower.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 获取今日考勤记录 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getAttendanceRecord.action_today"
+        Parameters="createid,istoday"
+        Url="[ServiceUrl]attendance/getAttendanceRecord.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 快速签到 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="quickSign.action"
+        Parameters="createid,onaddress,companyid"
+        Url="[ServiceUrl]attendance/quickSign.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 保存外出记录 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="POST"
+        Name="save.action2"
+        Parameters="/~"
+        Url="[ServiceUrl]goout/save.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.17.1	获取消息或工作的最新消息 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="getMsgList.action"
+        Parameters="touser,companyid,apitype"
+        Url="[ServiceUrl]msgcenter/getMsgList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.17.2	删除消息 -->
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="setMsgToRead.action"
+        Parameters="touser,modulecode"
+        Url="[ServiceUrl]msgcenter/setMsgToRead.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.1.10	注册企业 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="GET"
+        Name="regCorpCheck.action"
+        Parameters="phone,password,companyname"
+        Url="[ServiceUrl]user/regCorpCheck.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.1.11	注册企业-校验验证码 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="GET"
+        Name="regCorpCheckCode.action"
+        Parameters="phone,password,companyname,code"
+        Url="[ServiceUrl]user/regCorpCheckCode.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.1.12	创建组织架构 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="POST"
+        Name="firstCreateDept.action"
+        Parameters="/~"
+        Url="[ServiceUrl]dept/firstCreateDept.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.1.13	邀请员工 -->
+         <!-- 责任人：谢萌 -->
+         
+        <ServiceMethod
+        Method="POST"
+        Name="inviteUser.action"
+        Parameters="/~"
+        Url="[ServiceUrl]user/inviteUser.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+<!-------------------------- 保存打卡记录 ------------------------>
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="POST"
+        Name="createAttd.action"
+        Parameters="/~"
+        Url="[ServiceUrl]attendance/createAttd.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+<!-------------------------- 获取打卡记录 ------------------------>
+        <!-- 责任人：谢萌 -->
+        <ServiceMethod
+        Method="GET"
+        Name="attdList.action"
+        Parameters="createid,attdtype,istoday,start,count"
+        Url="[ServiceUrl]attendance/attdList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.1.14	完善信息(登陆后) -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="POST"
+        Name="firstLoginPerfectInfo.action"
+        Parameters="/~"
+        Url="[ServiceUrl]user/firstLoginPerfectInfo.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.1.15	解除企业关联 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="GET"
+        Name="relieveCorpUser.action"
+        Parameters="phone,companyid"
+        Url="[ServiceUrl]user/relieveCorpUser.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.1.16	邀请列表 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="GET"
+        Name="inviteList.action"
+        Parameters="companyid,userid"
+        Url="[ServiceUrl]user/inviteList.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.4.7	删除通知 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="GET"
+        Name="markNoticeDel.action"
+        Parameters="noticedel.userid,noticedel.noticeid"
+        Url="[ServiceUrl]notice/markNoticeDel.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.7.11	获取上/下一条审批/申请 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="GET"
+        Name="getPrevOrNextApply.action"
+        Parameters="dealid,createtime,prveornext,type,companyid"
+        Url="[ServiceUrl]apply/getPrevOrNextApply.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.4.8	删除@我的通知 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="GET"
+        Name="atMeNoticeDel.action"
+        Parameters="commentat.id"
+        Url="[ServiceUrl]notice/atMeNoticeDel.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+        <!-- 1.6.20	修改任务 -->
+        <!-- 责任人：谢萌 -->
+        
+        <ServiceMethod
+        Method="POST"
+        Name="updateTask.action"
+        Parameters="/~"
+        Url="[ServiceUrl]task/updateTask.action"
+        ShowWaitBox="false"
+        Timeout="60" />
+        
+    </ServiceMethods>
+    
+</ServiceMetadata>

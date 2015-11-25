@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="q5l-8b-kzi" customClass="SousuoView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="搜索分割短线" id="jSE-u9-fjJ">
+                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="搜索icon" id="Sqh-Sr-gNi">
+                    <rect key="frame" x="15" y="17" width="15" height="15"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bZj-mq-NDO">
+                    <rect key="frame" x="0.0" y="49" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索" minimumFontSize="17" id="5V9-2e-PSg">
+                    <rect key="frame" x="38" y="0.0" width="282" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="textColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="shuxian" destination="jSE-u9-fjJ" id="yXf-WM-cYU"/>
+                <outlet property="sousuoTextField" destination="5V9-2e-PSg" id="gDW-m1-ERy"/>
+                <outlet property="tubiao" destination="Sqh-Sr-gNi" id="0kq-Ex-k8O"/>
+            </connections>
+            <point key="canvasLocation" x="-11" y="175"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="搜索icon" width="15" height="15"/>
+        <image name="搜索分割短线" width="1" height="30"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

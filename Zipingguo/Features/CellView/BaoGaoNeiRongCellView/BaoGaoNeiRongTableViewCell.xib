@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="229" id="KGk-i7-Jjw" customClass="BaoGaoNeiRongTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="228"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日总结：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xQ6-IG-ZV0">
+                        <rect key="frame" x="15" y="15" width="79" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <webView hidden="YES" contentMode="scaleToFill" id="zng-AA-qxy">
+                        <rect key="frame" x="0.0" y="36" width="320" height="75"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="E5y-Ah-V61"/>
+                        </connections>
+                    </webView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="明日计划：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1C4-QI-SQ7">
+                        <rect key="frame" x="14" y="119" width="79" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <webView hidden="YES" contentMode="scaleToFill" id="V1Q-lr-Lj9">
+                        <rect key="frame" x="0.0" y="141" width="320" height="75"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="2kY-1C-3og"/>
+                        </connections>
+                    </webView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="ZLr-Gf-ut6">
+                        <rect key="frame" x="0.0" y="35" width="320" height="75"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <color key="textColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="Fa0-vP-ogc">
+                        <rect key="frame" x="0.0" y="141" width="320" height="75"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <color key="textColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分割线.png" id="7fr-u8-7Q2">
+                        <rect key="frame" x="0.0" y="228" width="320" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    </imageView>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="jinriLabel" destination="xQ6-IG-ZV0" id="lae-mT-3lG"/>
+                <outlet property="jinriTextView" destination="ZLr-Gf-ut6" id="ZkJ-ls-CpK"/>
+                <outlet property="jinriWebView" destination="zng-AA-qxy" id="rhG-Fs-WyL"/>
+                <outlet property="mingriLabel" destination="1C4-QI-SQ7" id="jO0-Go-7KK"/>
+                <outlet property="mingriTextView" destination="Fa0-vP-ogc" id="Z2u-CQ-qkO"/>
+                <outlet property="mingriWebView" destination="V1Q-lr-Lj9" id="Jte-ld-auZ"/>
+            </connections>
+            <point key="canvasLocation" x="405" y="402.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="分割线.png" width="360" height="1"/>
+    </resources>
+</document>

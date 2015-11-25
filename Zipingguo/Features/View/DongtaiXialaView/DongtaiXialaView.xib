@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iWj-GY-2mh" customClass="DongtaiXialaView">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="225"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dsm-Sk-JUT">
+                    <rect key="frame" x="0.0" y="49" width="140" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="-150" minY="5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="@我的动态" image="中间bg">
+                        <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.015686274510000001" green="0.68627450980000004" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" image="中间bg点击.png"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="iWj-GY-2mh" eventType="touchUpInside" id="evm-3I-EA9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lsV-yv-eHK">
+                    <rect key="frame" x="0.0" y="92" width="140" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="-150" minY="5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="我的关注" image="中间bg">
+                        <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.015686274510000001" green="0.68627450980000004" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" image="中间bg点击.png"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="iWj-GY-2mh" eventType="touchUpInside" id="SCW-Mh-kw4"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Jf-QP-nMi">
+                    <rect key="frame" x="0.0" y="135" width="140" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="-150" minY="5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="我的动态" image="中间bg">
+                        <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.015686274510000001" green="0.68627450980000004" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" image="中间bg点击.png"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="iWj-GY-2mh" eventType="touchUpInside" id="ZYy-fg-3yu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HcF-CM-Emd">
+                    <rect key="frame" x="0.0" y="178" width="140" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="-150" minY="5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="我收藏的" image="下bg">
+                        <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.015686274510000001" green="0.68627450980000004" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" image="下bg点击.png"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="iWj-GY-2mh" eventType="touchUpInside" id="tbn-yh-ov4"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分隔线220" id="goQ-Fj-Kel">
+                    <rect key="frame" x="15" y="48" width="110" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分隔线220" id="7SY-4B-cfb">
+                    <rect key="frame" x="15" y="93" width="110" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分隔线220" id="nTw-ha-Zyg">
+                    <rect key="frame" x="15" y="135" width="110" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分隔线220" id="6SH-MM-U8V">
+                    <rect key="frame" x="15" y="179" width="110" height="1"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ILC-AT-sOj">
+                    <rect key="frame" x="0.0" y="0.0" width="140" height="49"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="titleEdgeInsets" minX="-150" minY="5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="全部动态" image="上bg">
+                        <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.015686274510000001" green="0.68627450980000004" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="highlighted" image="上bg点击"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="iWj-GY-2mh" eventType="touchUpInside" id="a1i-jw-MBg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="quanbudongtaiButton" destination="ILC-AT-sOj" id="ijI-AM-3en"/>
+                <outlet property="wodedongtaiButton" destination="8Jf-QP-nMi" id="pNT-KM-hJA"/>
+                <outlet property="wodeguanzhuButton" destination="lsV-yv-eHK" id="b4C-MD-NDv"/>
+                <outlet property="woshoucangdeButton" destination="HcF-CM-Emd" id="6wy-ZT-BWC"/>
+                <outlet property="yaoqingwodedongtaiButton" destination="Dsm-Sk-JUT" id="x0v-5i-vm5"/>
+            </connections>
+            <point key="canvasLocation" x="-90" y="208.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="上bg" width="140" height="49"/>
+        <image name="上bg点击" width="140" height="49"/>
+        <image name="下bg" width="140" height="44"/>
+        <image name="下bg点击.png" width="140" height="44"/>
+        <image name="中间bg" width="140" height="44"/>
+        <image name="中间bg点击.png" width="140" height="44"/>
+        <image name="分隔线220" width="110" height="1"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

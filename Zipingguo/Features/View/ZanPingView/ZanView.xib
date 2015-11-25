@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pJS-11-aVF" customClass="ZanView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="KBN-aN-d1g">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="赞icon-评论" id="UTA-D1-1af">
+                            <rect key="frame" x="55" y="13" width="12" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王嗷嗷，鱼嗷嗷，李翠花，王酸菜等21人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sCA-8D-5HY">
+                            <rect key="frame" x="79" y="8" width="228" height="21"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.37254901960784315" green="0.45098039215686275" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.96862745098039216" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="zanName" destination="sCA-8D-5HY" id="MET-AT-dkv"/>
+                <outlet property="zanView" destination="KBN-aN-d1g" id="FEI-7f-tdn"/>
+                <outlet property="zanicon" destination="UTA-D1-1af" id="sRL-kT-zav"/>
+            </connections>
+            <point key="canvasLocation" x="283" y="266"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="赞icon-评论" width="12" height="13"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

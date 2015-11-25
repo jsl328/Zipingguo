@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="crG-aI-JTK" customClass="HeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="发送失败icon" id="tIK-h4-0MN">
+                    <rect key="frame" x="15" y="10" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前网络不可用，请检查您的网络设置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kWl-8F-uNY">
+                    <rect key="frame" x="45" y="10" width="256" height="21"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0u1-BB-P6b">
+                    <rect key="frame" x="0.0" y="39" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.96862745098039216" blue="0.67688929738562087" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="biaoti" destination="kWl-8F-uNY" id="Kzs-3b-jpw"/>
+                <outlet property="icon" destination="tIK-h4-0MN" id="4ZK-Li-S9o"/>
+            </connections>
+            <point key="canvasLocation" x="262" y="299"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="发送失败icon" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

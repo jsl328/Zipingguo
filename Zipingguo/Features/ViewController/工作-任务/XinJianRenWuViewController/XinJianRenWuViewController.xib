@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XinJianRenWuViewController">
+            <connections>
+                <outlet property="baseTableView" destination="OLi-Ot-Jzh" id="O8s-c3-Ks0"/>
+                <outlet property="choseTimePickerView" destination="Rj0-tv-g6X" id="6fe-1B-UeP"/>
+                <outlet property="maskView" destination="kTx-2I-Ddb" id="jlM-sB-mxG"/>
+                <outlet property="riQiView" destination="ke1-rf-TDE" id="gK8-Y6-d5R"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OLi-Ot-Jzh">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ZME-Bq-aXr"/>
+                        <outlet property="delegate" destination="-1" id="esu-4G-zrt"/>
+                    </connections>
+                </tableView>
+                <view hidden="YES" alpha="0.49999999999999961" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kTx-2I-Ddb">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ke1-rf-TDE" userLabel="View - 日期选择">
+                    <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gGY-kf-2zN">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="kcl-oK-c0O"/>
+                            </constraints>
+                            <items>
+                                <barButtonItem title="取消" id="IjX-u0-DJM">
+                                    <connections>
+                                        <action selector="riQiQuViewButtonClick:" destination="-1" id="jdW-hr-jc1"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="j17-e0-xlt"/>
+                                <barButtonItem title="确定" id="agW-2H-v6h">
+                                    <connections>
+                                        <action selector="riQiQuViewButtonClick:" destination="-1" id="Lgk-0x-WjM"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rj0-tv-g6X">
+                            <rect key="frame" x="0.0" y="41" width="320" height="162"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <date key="date" timeIntervalSinceReferenceDate="466162714.35359401">
+                                <!--2015-10-10 09:38:34 +0000-->
+                            </date>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                <!--1970-01-01 11:00:00 +0000-->
+                            </date>
+                            <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                <!--2037-12-31 11:00:00 +0000-->
+                            </date>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="57Z-qH-B0d"/>
+                        <constraint firstAttribute="trailing" secondItem="gGY-kf-2zN" secondAttribute="trailing" id="Atb-nz-vEd"/>
+                        <constraint firstAttribute="bottom" secondItem="Rj0-tv-g6X" secondAttribute="bottom" id="Heq-tT-yND"/>
+                        <constraint firstItem="Rj0-tv-g6X" firstAttribute="leading" secondItem="ke1-rf-TDE" secondAttribute="leading" id="bVm-Eg-UXX"/>
+                        <constraint firstItem="gGY-kf-2zN" firstAttribute="top" secondItem="ke1-rf-TDE" secondAttribute="top" id="cJz-FT-ylM"/>
+                        <constraint firstAttribute="trailing" secondItem="Rj0-tv-g6X" secondAttribute="trailing" id="q3A-VP-j5f"/>
+                        <constraint firstItem="gGY-kf-2zN" firstAttribute="leading" secondItem="ke1-rf-TDE" secondAttribute="leading" id="t6z-W3-yST"/>
+                        <constraint firstItem="Rj0-tv-g6X" firstAttribute="top" secondItem="gGY-kf-2zN" secondAttribute="bottom" id="tkt-s6-W6b"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OLi-Ot-Jzh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0Hf-Dh-ygf"/>
+                <constraint firstAttribute="trailing" secondItem="kTx-2I-Ddb" secondAttribute="trailing" id="DEe-Dh-DpC"/>
+                <constraint firstItem="OLi-Ot-Jzh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JAy-y9-mKr"/>
+                <constraint firstAttribute="bottom" secondItem="kTx-2I-Ddb" secondAttribute="bottom" id="Lup-ob-59K"/>
+                <constraint firstAttribute="bottom" secondItem="OLi-Ot-Jzh" secondAttribute="bottom" id="S6o-zh-djV"/>
+                <constraint firstAttribute="trailing" secondItem="OLi-Ot-Jzh" secondAttribute="trailing" id="dFU-7w-CQ5"/>
+                <constraint firstItem="ke1-rf-TDE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eCn-Te-bRR"/>
+                <constraint firstAttribute="trailing" secondItem="ke1-rf-TDE" secondAttribute="trailing" id="iQM-0p-J7M"/>
+                <constraint firstItem="kTx-2I-Ddb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iqG-Cl-fde"/>
+                <constraint firstAttribute="bottom" secondItem="ke1-rf-TDE" secondAttribute="bottom" id="lha-xQ-Ev4"/>
+                <constraint firstItem="kTx-2I-Ddb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="niA-Ds-7Fh"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="388" y="241"/>
+        </view>
+    </objects>
+</document>

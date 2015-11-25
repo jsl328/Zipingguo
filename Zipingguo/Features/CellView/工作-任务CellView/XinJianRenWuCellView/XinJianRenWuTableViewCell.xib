@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="KGk-i7-Jjw" customClass="XinJianRenWuTableViewCell">
+            <rect key="frame" x="0.0" y="1" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcR-qZ-wkp">
+                        <rect key="frame" x="90" y="13" width="195" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Xj4-mh-wf5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RW右箭头" translatesAutoresizingMaskIntoConstraints="NO" id="egx-Rd-MxT">
+                        <rect key="frame" x="290" y="15" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="6c1-kx-78V"/>
+                            <constraint firstAttribute="width" secondItem="egx-Rd-MxT" secondAttribute="height" multiplier="19:22" constant="2.045454545454545" id="gfr-fU-Ohc"/>
+                            <constraint firstAttribute="width" constant="15" id="s9D-87-i6q"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="截止日期:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zI9-2B-Hl7">
+                        <rect key="frame" x="15" y="12" width="76" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="76" id="Ll8-sO-UEL"/>
+                            <constraint firstAttribute="height" constant="21" id="fXz-7H-euu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分割线750" translatesAutoresizingMaskIntoConstraints="NO" id="pB4-Ke-p4n">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="SQh-zq-yDM"/>
+                        </constraints>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分割线" translatesAutoresizingMaskIntoConstraints="NO" id="g5Q-P4-BxE" userLabel="分割线670-15">
+                        <rect key="frame" x="15" y="43" width="305" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="0R0-ir-bFE"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="ouU-im-lVl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ouU-im-lVl"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="egx-Rd-MxT" secondAttribute="centerY" id="3ch-ut-2o0"/>
+                    <constraint firstAttribute="trailing" secondItem="pB4-Ke-p4n" secondAttribute="trailing" id="4kl-AI-eBd"/>
+                    <constraint firstAttribute="bottom" secondItem="g5Q-P4-BxE" secondAttribute="bottom" id="4yD-Ng-2ed"/>
+                    <constraint firstAttribute="trailing" secondItem="egx-Rd-MxT" secondAttribute="trailing" constant="15" id="88V-Ke-Bur"/>
+                    <constraint firstAttribute="centerY" secondItem="EcR-qZ-wkp" secondAttribute="centerY" id="DwI-l9-zoe"/>
+                    <constraint firstItem="zI9-2B-Hl7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HJ9-lr-noB"/>
+                    <constraint firstAttribute="bottom" secondItem="pB4-Ke-p4n" secondAttribute="bottom" id="L7s-6B-6Ml"/>
+                    <constraint firstItem="g5Q-P4-BxE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Lif-Ne-OlP"/>
+                    <constraint firstItem="pB4-Ke-p4n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Sgb-7P-f2l"/>
+                    <constraint firstItem="EcR-qZ-wkp" firstAttribute="leading" secondItem="zI9-2B-Hl7" secondAttribute="leading" constant="75" id="bFi-7l-DWg"/>
+                    <constraint firstAttribute="trailing" secondItem="g5Q-P4-BxE" secondAttribute="trailing" id="cee-Gv-cLU"/>
+                    <constraint firstItem="EcR-qZ-wkp" firstAttribute="trailing" secondItem="egx-Rd-MxT" secondAttribute="trailing" constant="-20" id="hWz-dN-MvX"/>
+                    <constraint firstAttribute="centerY" secondItem="zI9-2B-Hl7" secondAttribute="centerY" constant="-0.5" id="rwu-l8-5DC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="egx-Rd-MxT" id="HMQ-fU-aLM"/>
+                <outlet property="leftConstraint" destination="hWz-dN-MvX" id="z6r-9B-qDN"/>
+                <outlet property="lineImageView" destination="pB4-Ke-p4n" id="PsT-jM-O64"/>
+                <outlet property="lineImageView2" destination="g5Q-P4-BxE" id="JhA-Bo-wVF"/>
+                <outlet property="titleNameLabel" destination="zI9-2B-Hl7" id="P88-EN-iuz"/>
+                <outlet property="valueLabel" destination="EcR-qZ-wkp" id="t1x-bQ-dpA"/>
+            </connections>
+            <point key="canvasLocation" x="237" y="196.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="RW右箭头" width="15" height="15"/>
+        <image name="分割线" width="360" height="1"/>
+        <image name="分割线750" width="375" height="1"/>
+    </resources>
+</document>

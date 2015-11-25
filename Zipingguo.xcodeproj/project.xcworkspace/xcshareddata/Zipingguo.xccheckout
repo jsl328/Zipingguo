@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F953C3B6-F5B1-4210-AE6C-1D03EC29201E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Zipingguo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</key>
+		<string>svn://114.112.98.143/svnroot/IOS_Project/Zipingguo</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Zipingguo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</key>
+		<string>svn://114.112.98.143</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://114.112.98.143/svnroot/IOS_Project/Zipingguo/Zipingguo.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>deeee121-cb98-314a-9a09-ee58c3b2a69d++8771</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Zipingguo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GongZuoBaoGao2ViewController">
+            <connections>
+                <outlet property="lineLabel" destination="lJ1-5o-cfe" id="m7V-fd-wrB"/>
+                <outlet property="mTableView" destination="39Y-W7-mdt" id="5bu-lX-kGr"/>
+                <outlet property="ribaoBtn" destination="3CG-SA-49c" id="rSR-jl-DUq"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="xuanzeView" destination="Sh3-wL-vr1" id="Vth-Mg-cgV"/>
+                <outlet property="yuebaoBtn" destination="uDi-0K-Lr9" id="Q6B-em-cbG"/>
+                <outlet property="zhoubaoBtn" destination="rfq-bC-SXv" id="jIh-oZ-Kzj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="39Y-W7-mdt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="d6G-HA-2tn"/>
+                        <outlet property="delegate" destination="-1" id="eea-iW-uBb"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="256.5" y="219.5"/>
+        </view>
+        <view contentMode="scaleToFill" id="Sh3-wL-vr1">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="10" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3CG-SA-49c">
+                    <rect key="frame" x="0.0" y="0.0" width="125" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="日报">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.20392156859999999" green="0.61960784310000006" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="DtI-sJ-IfM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rfq-bC-SXv">
+                    <rect key="frame" x="125" y="0.0" width="125" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="周报">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.20392156859999999" green="0.61960784310000006" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="rUd-dE-TIs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uDi-0K-Lr9">
+                    <rect key="frame" x="250" y="0.0" width="125" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="月报">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.20392156859999999" green="0.61960784310000006" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="2Lh-XE-XZT"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lJ1-5o-cfe">
+                    <rect key="frame" x="52" y="38" width="20" height="2"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.61960784310000006" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.15686274510000001" green="0.16078431369999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="273.5" y="654"/>
+        </view>
+    </objects>
+</document>

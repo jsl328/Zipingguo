@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="RenWuTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="普通icon" translatesAutoresizingMaskIntoConstraints="NO" id="8ue-Mp-w4a">
+                        <rect key="frame" x="15" y="24" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="EJ4-6k-lT6"/>
+                            <constraint firstAttribute="width" secondItem="8ue-Mp-w4a" secondAttribute="height" multiplier="1:1" id="IjR-6y-0sC"/>
+                            <constraint firstAttribute="height" constant="15" id="i1c-Tl-o3Q"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任务名2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqV-xW-gnC" userLabel="任务2">
+                        <rect key="frame" x="40" y="21" width="272" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="K9t-SF-E2B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="杰兰特" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mi-4U-GWE" userLabel="分配">
+                        <rect key="frame" x="40" y="37" width="272" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="fY6-VR-N2a"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任务名1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4V-gG-iZ3" userLabel="任务1">
+                        <rect key="frame" x="40" y="15" width="270" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="kPL-6s-WSZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="eqV-xW-gnC" firstAttribute="leading" secondItem="8ue-Mp-w4a" secondAttribute="trailing" constant="10" id="4KY-GZ-UKo"/>
+                    <constraint firstItem="8ue-Mp-w4a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="7OM-lq-BCt"/>
+                    <constraint firstAttribute="trailing" secondItem="4Mi-4U-GWE" secondAttribute="trailing" constant="8" id="QY8-Ff-7ZY"/>
+                    <constraint firstAttribute="trailing" secondItem="p4V-gG-iZ3" secondAttribute="trailing" constant="10" id="Qtf-T5-Uwi"/>
+                    <constraint firstItem="4Mi-4U-GWE" firstAttribute="top" secondItem="p4V-gG-iZ3" secondAttribute="bottom" constant="8" id="URD-4r-RI0"/>
+                    <constraint firstItem="4Mi-4U-GWE" firstAttribute="leading" secondItem="8ue-Mp-w4a" secondAttribute="trailing" constant="10" id="Vxb-aO-BUF"/>
+                    <constraint firstItem="p4V-gG-iZ3" firstAttribute="leading" secondItem="8ue-Mp-w4a" secondAttribute="trailing" constant="10" id="aDy-h7-CqA"/>
+                    <constraint firstItem="8ue-Mp-w4a" firstAttribute="centerY" secondItem="eqV-xW-gnC" secondAttribute="centerY" id="fs9-et-1Od"/>
+                    <constraint firstAttribute="centerY" secondItem="8ue-Mp-w4a" secondAttribute="centerY" id="hs1-ez-qzF"/>
+                    <constraint firstItem="p4V-gG-iZ3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="inb-Xx-cM5"/>
+                    <constraint firstAttribute="trailing" secondItem="eqV-xW-gnC" secondAttribute="trailing" constant="8" id="trp-8d-K1y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="firstRenWuNameLabel" destination="p4V-gG-iZ3" id="Nhl-K2-tMl"/>
+                <outlet property="iconImageView" destination="8ue-Mp-w4a" id="hyb-oc-dyd"/>
+                <outlet property="kuanjieRenwu" destination="4KY-GZ-UKo" id="BPf-dd-nnt"/>
+                <outlet property="personNameLabel" destination="4Mi-4U-GWE" id="SbV-Ww-2Ry"/>
+                <outlet property="secondRenWuNameLabel" destination="eqV-xW-gnC" id="jNT-GC-c4v"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="190"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="普通icon" width="15" height="15"/>
+    </resources>
+</document>

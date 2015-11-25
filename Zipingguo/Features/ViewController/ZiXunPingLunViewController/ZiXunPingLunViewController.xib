@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZiXunPingLunViewController">
+            <connections>
+                <outlet property="bottomView" destination="Y9R-Y2-soz" id="qAa-tX-tXa"/>
+                <outlet property="headerView" destination="IeX-NH-Xu6" id="bje-Vh-dKZ"/>
+                <outlet property="myTableView" destination="cTP-7h-AYC" id="0gu-v3-Vaw"/>
+                <outlet property="nameLabel" destination="wNq-BC-oXK" id="UYQ-Yf-bVx"/>
+                <outlet property="neiRongLabel" destination="sfi-jz-dr2" id="Cwf-Qd-Nko"/>
+                <outlet property="sendBtn" destination="Kye-iw-WaS" id="Ahu-rd-Zko"/>
+                <outlet property="shuRuTextView" destination="yGp-qW-15z" id="39n-Qa-NdA"/>
+                <outlet property="timeLabel" destination="PKd-Cm-hEs" id="FHM-Gb-q2r"/>
+                <outlet property="touXiangImageView" destination="9f5-fb-79q" id="t2a-dy-SzE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yaoQingBtn" destination="SdO-1w-Bf8" id="cxN-aH-Den"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="cTP-7h-AYC">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="GaY-Za-Ztl"/>
+                        <outlet property="delegate" destination="-1" id="Uw3-4e-UIm"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" id="Y9R-Y2-soz" customClass="PinglunKuangView">
+                    <rect key="frame" x="0.0" y="519" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hN1-Oq-MMp">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SdO-1w-Bf8">
+                            <rect key="frame" x="15" y="11" width="26" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="@icon"/>
+                            <connections>
+                                <action selector="yaoQingPesonBtnClick:" destination="-1" eventType="touchUpInside" id="kiC-F0-OQA"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yGp-qW-15z" customClass="UIPlaceHolderTextView">
+                            <rect key="frame" x="56" y="10" width="217" height="30"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="ghw-W8-536"/>
+                            </connections>
+                        </textView>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Kye-iw-WaS">
+                            <rect key="frame" x="287" y="14" width="18" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="发送icon浅">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="faSongBtnClick:" destination="-1" eventType="touchUpInside" id="EUT-yl-uPO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="350" y="190"/>
+        </view>
+        <view hidden="YES" contentMode="scaleToFill" id="IeX-NH-Xu6">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像80.png" id="9f5-fb-79q">
+                    <rect key="frame" x="15" y="12" width="40" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王嗷嗷" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wNq-BC-oXK">
+                    <rect key="frame" x="70" y="10" width="155" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.37254901960784315" green="0.45098039215686275" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下午 13:15" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PKd-Cm-hEs">
+                    <rect key="frame" x="225" y="10" width="80" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sfi-jz-dr2">
+                    <rect key="frame" x="70" y="32" width="235" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分割线.png" id="1G0-ne-DXF">
+                    <rect key="frame" x="0.0" y="69" width="320" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="342" y="-167"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="@icon" width="26" height="26"/>
+        <image name="分割线.png" width="360" height="1"/>
+        <image name="发送icon浅" width="18" height="18"/>
+        <image name="头像80.png" width="40" height="40"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

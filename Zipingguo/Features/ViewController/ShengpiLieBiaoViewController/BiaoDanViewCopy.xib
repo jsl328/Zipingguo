@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BiaoDanViewCopy" id="avt-ni-aBz" customClass="BiaoDanViewCopy">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="avt-ni-aBz" id="yFt-zH-vvt">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cyd-yA-XX2">
+                        <rect key="frame" x="15" y="12" width="120" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="内容" textAlignment="right" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JXs-5q-BVt">
+                        <rect key="frame" x="120" y="12" width="220" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="向右箭头.png" id="Svs-Fo-NYq">
+                        <rect key="frame" x="345" y="14" width="15" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="AGu-Pw-wff">
+                        <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rtj-Ha-Run">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="BtnOnClick:" destination="avt-ni-aBz" eventType="touchUpInside" id="rzS-1d-9r5"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="arrowBtnView" destination="Svs-Fo-NYq" id="RIF-ao-Twq"/>
+                <outlet property="contentlabel" destination="JXs-5q-BVt" id="bnf-wJ-SHd"/>
+                <outlet property="downLineImageView" destination="AGu-Pw-wff" id="I3K-3p-Ve2"/>
+                <outlet property="selectBtn" destination="Rtj-Ha-Run" id="kRe-8d-YNR"/>
+                <outlet property="title" destination="cyd-yA-XX2" id="7tU-eR-Ffj"/>
+            </connections>
+            <point key="canvasLocation" x="441.5" y="263"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="向右箭头.png" width="15" height="15"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RenWuViewController">
+            <connections>
+                <outlet property="fenPeiTableView" destination="yWt-Ek-ctd" id="qnC-Xz-lY0"/>
+                <outlet property="myTableView" destination="SVv-ee-LfH" id="xdG-4f-eAG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SVv-ee-LfH" userLabel="Table View-我的任务">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ppO-MV-yJM"/>
+                        <outlet property="delegate" destination="-1" id="f30-El-QMy"/>
+                    </connections>
+                </tableView>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yWt-Ek-ctd" userLabel="Table View-我分配的">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="sqs-go-Ppp"/>
+                        <outlet property="delegate" destination="-1" id="n2F-Oa-nEY"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SVv-ee-LfH" secondAttribute="bottom" id="3we-VS-j6E"/>
+                <constraint firstItem="SVv-ee-LfH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GpE-jE-2vA"/>
+                <constraint firstItem="yWt-Ek-ctd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KMA-gj-Ca1"/>
+                <constraint firstItem="yWt-Ek-ctd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="PIZ-6k-4h2"/>
+                <constraint firstAttribute="bottom" secondItem="yWt-Ek-ctd" secondAttribute="bottom" id="RlG-WB-75b"/>
+                <constraint firstAttribute="trailing" secondItem="yWt-Ek-ctd" secondAttribute="trailing" id="cPo-HR-J8l"/>
+                <constraint firstItem="SVv-ee-LfH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nFW-c5-Hrh"/>
+                <constraint firstAttribute="trailing" secondItem="SVv-ee-LfH" secondAttribute="trailing" id="zRr-Ek-qEz"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="369" y="358"/>
+        </view>
+    </objects>
+</document>

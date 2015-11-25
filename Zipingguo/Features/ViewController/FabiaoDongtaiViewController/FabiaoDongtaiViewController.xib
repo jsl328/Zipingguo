@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FabiaoDongtaiViewController">
+            <connections>
+                <outlet property="anzhuBtn" destination="ptb-gx-Z9Z" id="TUi-DZ-PUD"/>
+                <outlet property="dibuView" destination="LHq-pX-TaA" id="O11-3H-zcE"/>
+                <outlet property="fabiaoView" destination="Hty-Fl-5aZ" id="WGg-UX-eUA"/>
+                <outlet property="fabiaoWenzi" destination="Ijd-Sg-f4L" id="3Q9-SV-Q9K"/>
+                <outlet property="guanbiBtn" destination="sIt-II-fvV" id="YNp-ci-zeu"/>
+                <outlet property="tupianBtn" destination="dPb-ea-afn" id="afy-hX-lkP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weizhiBtn" destination="mxi-z3-6sz" id="67K-X0-eLh"/>
+                <outlet property="xinxiScrollView" destination="oC7-7d-Csv" id="Y4X-9B-h3y"/>
+                <outlet property="yaoqingBtn" destination="zxC-al-R9R" id="lBw-QJ-GQc"/>
+                <outlet property="yuyinBtn" destination="FN7-2r-cuA" id="YAC-rH-bGF"/>
+                <outlet property="yuyinView" destination="Les-Tn-0Ob" id="bqW-Cf-UOJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="LHq-pX-TaA">
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Kwg-CB-4gA">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.81649116850000003" green="0.81649116850000003" blue="0.81649116850000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FN7-2r-cuA">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="语音icon">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="P82-zf-Vb2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zxC-al-R9R">
+                            <rect key="frame" x="80" y="0.0" width="80" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="@icon">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="UgO-Rf-a4L"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dPb-ea-afn">
+                            <rect key="frame" x="160" y="0.0" width="80" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="图片icon">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="sHV-Cw-9ZI"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mxi-z3-6sz">
+                            <rect key="frame" x="240" y="0.0" width="80" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="位置icon">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="vU6-e4-m1z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" id="Les-Tn-0Ob">
+                    <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="2F7-xB-mXk">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.81649116850000003" green="0.81649116850000003" blue="0.81649116850000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ptb-gx-Z9Z">
+                            <rect key="frame" x="10" y="5" width="250" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="请按住说话" backgroundImage="语音框">
+                                <color key="titleColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" title="松手发送语音" backgroundImage="语音框-摁住.png"/>
+                            <connections>
+                                <action selector="recordButtonTouchDown:" destination="-1" eventType="touchDown" id="GAu-ML-DZ0"/>
+                                <action selector="recordButtonTouchUpInside:" destination="-1" eventType="touchUpInside" id="5Hc-G6-U8a"/>
+                                <action selector="recordButtonTouchUpOutside:" destination="-1" eventType="touchUpOutside" id="Ke2-DH-RVW"/>
+                                <action selector="recordDragInside:" destination="-1" eventType="touchDragEnter" id="OyP-LI-7Wh"/>
+                                <action selector="recordDragOutside:" destination="-1" eventType="touchDragExit" id="olL-xz-npi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sIt-II-fvV">
+                            <rect key="frame" x="263" y="0.0" width="50" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="语音-关闭icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="rLD-ZV-Gre"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" id="Hty-Fl-5aZ">
+                    <rect key="frame" x="15" y="10" width="290" height="200"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ijd-Sg-f4L" customClass="UIPlaceHolderTextView">
+                            <rect key="frame" x="0.0" y="0.0" width="290" height="200"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="textColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="oC7-7d-Csv">
+                    <rect key="frame" x="0.0" y="568" width="0.0" height="0.0"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="280" y="274"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="@icon" width="26" height="26"/>
+        <image name="位置icon" width="26" height="26"/>
+        <image name="图片icon" width="26" height="26"/>
+        <image name="语音-关闭icon.png" width="26" height="26"/>
+        <image name="语音icon" width="26" height="26"/>
+        <image name="语音框" width="304" height="34"/>
+        <image name="语音框-摁住.png" width="304" height="34"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

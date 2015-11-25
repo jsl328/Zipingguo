@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZuZhiKuangJiaViewController">
+            <connections>
+                <outlet property="myTableView" destination="heG-tc-rrn" id="Xce-M9-AGB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qt0-Py-upY" userLabel="View - headerveiw">
+                    <rect key="frame" x="0.0" y="64" width="320" height="111"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请为您的企业添加组织框架结构" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4j-8m-a5G">
+                            <rect key="frame" x="0.0" y="33" width="320" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="W1b-tC-z5e"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="X4j-8m-a5G" secondAttribute="centerY" constant="15" id="0TN-dT-oxV"/>
+                        <constraint firstAttribute="height" constant="111" id="3h3-01-cAJ"/>
+                        <constraint firstAttribute="trailing" secondItem="X4j-8m-a5G" secondAttribute="trailing" id="bgK-zI-e49"/>
+                        <constraint firstItem="X4j-8m-a5G" firstAttribute="leading" secondItem="Qt0-Py-upY" secondAttribute="leading" id="pul-fh-0cM"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="heG-tc-rrn">
+                    <rect key="frame" x="0.0" y="175" width="320" height="273"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="m3Y-yE-Kax"/>
+                        <outlet property="delegate" destination="-1" id="1vT-Dq-GgY"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKu-Bt-Igx">
+                    <rect key="frame" x="135" y="503" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Fsf-6w-qQh"/>
+                        <constraint firstAttribute="width" secondItem="tKu-Bt-Igx" secondAttribute="height" multiplier="1:1" id="yHV-Xd-zSm"/>
+                        <constraint firstAttribute="height" constant="50" id="zdb-Wu-Je8"/>
+                    </constraints>
+                    <state key="normal" image="添加button.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="添加button点击.png"/>
+                    <connections>
+                        <action selector="addNewButton:" destination="-1" eventType="touchUpInside" id="Tpo-lK-eAY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tKu-Bt-Igx" firstAttribute="width" secondItem="tKu-Bt-Igx" secondAttribute="height" multiplier="1:1" id="6uK-kS-hQT"/>
+                <constraint firstAttribute="trailing" secondItem="heG-tc-rrn" secondAttribute="trailing" id="BlO-if-Ij6"/>
+                <constraint firstAttribute="trailing" secondItem="Qt0-Py-upY" secondAttribute="trailing" id="CAE-D4-nrA"/>
+                <constraint firstItem="tKu-Bt-Igx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GCu-F4-5aB"/>
+                <constraint firstAttribute="bottom" secondItem="tKu-Bt-Igx" secondAttribute="bottom" constant="15" id="OkO-3z-r0G"/>
+                <constraint firstItem="heG-tc-rrn" firstAttribute="top" secondItem="Qt0-Py-upY" secondAttribute="top" constant="111" id="S2r-RP-bbB"/>
+                <constraint firstItem="Qt0-Py-upY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="gMZ-ic-vTp"/>
+                <constraint firstAttribute="bottom" secondItem="heG-tc-rrn" secondAttribute="bottom" constant="120" id="jc8-70-yuZ"/>
+                <constraint firstItem="Qt0-Py-upY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vch-bW-UyG"/>
+                <constraint firstItem="heG-tc-rrn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xpV-Gy-DC4"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="394" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="添加button.png" width="50" height="50"/>
+        <image name="添加button点击.png" width="50" height="50"/>
+    </resources>
+</document>

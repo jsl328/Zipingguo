@@ -1,0 +1,30 @@
+/* 
+  amaranth.strings
+  AmaranthDemo
+
+  Created by Bob Li on 14-7-22.
+  Copyright (c) 2014年 Bob Li. All rights reserved.
+*/
+
+"deviceShell.audioUnavailable" = "无法找到或启动录音设备。";
+"deviceShell.recordingFail" = "录音失败。";
+"deviceShell.audioTooShort" = "录音时间过短，录音无效。";
+"deviceShell.cameraUnavailable" = "相机不可用。";
+"defaultRecordDialog.use" = "使用";
+"defaultRecordDialog.discard" = "取消";
+"defaultRecordDialog.pleaseSpeak" = "请靠近手机说话";
+"defaultRecordDialog.timeExpired" = "录音已结束";
+"defaultDrawDialog.use" = "使用";
+"defaultDrawDialog.discard" = "取消";
+"jsonDeserializer.jsonStringEmpty" = "Json字符串为空";
+"jsonDeserializer.jsonStringInvalid" = "Json字符串无效。必须以{或[开始。";
+"jsonDeserializer.jsonParsingError" = "Json解析错误。";
+
+"accessingNetwork" = "正在访问网络...";
+"networkTimeout" = "网络超时";
+"networkFallback" = "网络访问错误";
+"usePayedNetwork" = "将使用付费网络，是否继续？";
+"encodeError" = "编码错误。";
+"decodeError" = "解码错误。";
+"noNetwork" = "未连接网络。";
+"networkTypeMismatch" = "网络类型不一致。";

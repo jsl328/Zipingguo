@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZiXunXiangQingViewController">
+            <connections>
+                <outlet property="bgScrollView" destination="vuN-kF-IDa" id="Rz9-u8-535"/>
+                <outlet property="bottomView" destination="Hrg-KJ-9XA" id="kIy-xs-zns"/>
+                <outlet property="contentWebView" destination="Jg7-oe-9dd" id="VVK-tq-SDw"/>
+                <outlet property="detailLabel" destination="3HN-ry-lG9" id="GVR-yA-hZp"/>
+                <outlet property="dianZanBtn" destination="Eok-t5-1vV" id="ZGh-C7-krK"/>
+                <outlet property="fenXiangBtn" destination="E7y-7l-Cdt" id="JMW-ix-mUU"/>
+                <outlet property="lineImageView" destination="b7r-Iy-fE5" id="31x-fM-E4J"/>
+                <outlet property="midView" destination="cEt-Qe-NDb" id="713-l5-3Ud"/>
+                <outlet property="pingLunBtn" destination="mE2-sV-gNk" id="Tes-Gy-Iq4"/>
+                <outlet property="shouCangBtn" destination="1Jr-cz-0Xv" id="NHh-AC-elY"/>
+                <outlet property="tipLabel" destination="JeK-ty-9Dy" id="oIi-sr-eu1"/>
+                <outlet property="titleNameLabel" destination="Zkw-pk-NOR" id="ZZM-hs-bBQ"/>
+                <outlet property="topView" destination="byp-Dt-uOY" id="Kig-BY-L8x"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="vuN-kF-IDa">
+                    <rect key="frame" x="0.0" y="64" width="375" height="480"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="byp-Dt-uOY" userLabel="top View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zkw-pk-NOR">
+                                    <rect key="frame" x="15" y="10" width="345" height="22"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3HN-ry-lG9">
+                                    <rect key="frame" x="15" y="56" width="345" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="b7r-Iy-fE5" userLabel="line Image View">
+                                    <rect key="frame" x="0.0" y="39" width="375" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <webView hidden="YES" contentMode="scaleToFill" id="Jg7-oe-9dd">
+                            <rect key="frame" x="0.0" y="85" width="375" height="200"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="2XC-YB-vYw"/>
+                            </connections>
+                        </webView>
+                        <view hidden="YES" contentMode="scaleToFill" id="cEt-Qe-NDb" userLabel="midView">
+                            <rect key="frame" x="0.0" y="285" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="BYZ-je-Ufg" userLabel="line Image View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JeK-ty-9Dy">
+                                    <rect key="frame" x="15" y="1" width="345" height="42"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="eKA-7A-kh1" userLabel="line Image View">
+                                    <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                </scrollView>
+                <view contentMode="scaleToFill" id="Hrg-KJ-9XA" userLabel="bottomView">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xT8-4W-rWl" userLabel="line Image View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                        </imageView>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1Jr-cz-0Xv">
+                            <rect key="frame" x="0.0" y="0.0" width="93" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="  收藏" image="收藏默认">
+                                <color key="titleColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="已收藏效果.png">
+                                <color key="titleColor" red="0.015686274509803921" green="0.68627450980392157" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="DTu-n7-tnC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E7y-7l-Cdt">
+                            <rect key="frame" x="93" y="0.0" width="93" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="  分享" image="分享">
+                                <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="KYD-Ou-Xtm"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Eok-t5-1vV">
+                            <rect key="frame" x="279" y="0.0" width="93" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="  点赞" image="点赞">
+                                <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="已点赞效果.png">
+                                <color key="titleColor" red="0.015686274509803921" green="0.68627450980392157" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="up3-gF-Xas"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mE2-sV-gNk">
+                            <rect key="frame" x="186" y="0.0" width="93" height="49"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="  评论" image="评论">
+                                <color key="titleColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="0.20784313725490194" green="0.21568627450980393" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="bottomBtnClick:" destination="-1" eventType="touchUpInside" id="DmK-qp-tpD"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="259.5" y="258.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="分享" width="14" height="14"/>
+        <image name="已收藏效果.png" width="14" height="14"/>
+        <image name="已点赞效果.png" width="15" height="15"/>
+        <image name="收藏默认" width="14" height="14"/>
+        <image name="点赞" width="15" height="15"/>
+        <image name="评论" width="15" height="15"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

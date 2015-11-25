@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titleName</key>
+		<string>消息</string>
+		<key>imageName</key>
+		<string>消息icon</string>
+		<key>controllerName</key>
+		<string>XiaoxiViewController</string>
+	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>动态</string>
+		<key>imageName</key>
+		<string>动态icon1</string>
+		<key>controllerName</key>
+		<string>DongtaiViewController</string>
+	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>通讯录</string>
+		<key>imageName</key>
+		<string>通讯录icon</string>
+		<key>controllerName</key>
+		<string>TongxunluViewController</string>
+	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>工作</string>
+		<key>imageName</key>
+		<string>工作icon</string>
+		<key>controllerName</key>
+		<string>GongzuoViewController</string>
+	</dict>
+	<dict>
+		<key>titleName</key>
+		<string>设置</string>
+		<key>imageName</key>
+		<string>设置icon</string>
+		<key>controllerName</key>
+		<string>ShezhiViewController</string>
+	</dict>
+</array>
+</plist>

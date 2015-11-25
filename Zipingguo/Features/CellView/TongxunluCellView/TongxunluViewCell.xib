@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TongxunluViewCell" id="KGk-i7-Jjw" customClass="TongxunluViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="bHh-Ud-Qtx">
+                        <rect key="frame" x="15" y="10" width="40" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="分割线" id="R8w-aY-1B3">
+                        <rect key="frame" x="15" y="59" width="480" height="1"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="王嗷嗷" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w7O-2f-3vC">
+                        <rect key="frame" x="70" y="19" width="172" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.20784313730000001" green="0.2156862745" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设计组" textAlignment="right" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sGb-tm-6Ct">
+                        <rect key="frame" x="230" y="19" width="80" height="21"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="yaM-vL-zvv" customClass="JZScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="左滑透明bg" id="AVe-ZX-nqE">
+                                <rect key="frame" x="320" y="0.0" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="uPt-DD-h0u" customClass="FXBlurView">
+                                <rect key="frame" x="320" y="0.0" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fr2-IM-llt">
+                                <rect key="frame" x="490" y="17" width="61" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <state key="normal" image="聊天icon">
+                                    <color key="titleColor" red="0.32156862749999998" green="0.76470588240000004" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="聊天icon-点击.png"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eiu-RE-2Zq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NGm-b7-pfs">
+                                <rect key="frame" x="410" y="17" width="61" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <state key="normal" image="信息icon">
+                                    <color key="titleColor" red="0.32156862749999998" green="0.76470588240000004" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="信息icon-点击.png"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="z6k-6t-1g6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dZT-qJ-xIo">
+                                <rect key="frame" x="330" y="17" width="61" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                <state key="normal" image="通话icon.png">
+                                    <color key="titleColor" red="0.32156862749999998" green="0.76470588240000004" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" image="通话icon-点击.png"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WyD-MI-I4T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="gqt-c8-cMs"/>
+                        </connections>
+                    </scrollView>
+                </subviews>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bumen" destination="sGb-tm-6Ct" id="7rM-KT-gb8"/>
+                <outlet property="dianhua" destination="dZT-qJ-xIo" id="7rv-wL-g6Z"/>
+                <outlet property="duanxin" destination="NGm-b7-pfs" id="IQ5-Dd-F7p"/>
+                <outlet property="fxView" destination="uPt-DD-h0u" id="nzf-di-bfJ"/>
+                <outlet property="huadongView" destination="AVe-ZX-nqE" id="ZIl-vj-Qmc"/>
+                <outlet property="liaotian" destination="Fr2-IM-llt" id="OwK-Z7-HxU"/>
+                <outlet property="name" destination="w7O-2f-3vC" id="5nR-47-gTE"/>
+                <outlet property="sc" destination="yaM-vL-zvv" id="jsH-xg-rMK"/>
+                <outlet property="touxiang" destination="bHh-Ud-Qtx" id="zV9-qS-Wqw"/>
+            </connections>
+            <point key="canvasLocation" x="386" y="210"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="信息icon" width="25" height="25"/>
+        <image name="信息icon-点击.png" width="25" height="25"/>
+        <image name="分割线" width="360" height="1"/>
+        <image name="左滑透明bg" width="375" height="50"/>
+        <image name="聊天icon" width="25" height="25"/>
+        <image name="聊天icon-点击.png" width="25" height="25"/>
+        <image name="通话icon-点击.png" width="25" height="25"/>
+        <image name="通话icon.png" width="25" height="25"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

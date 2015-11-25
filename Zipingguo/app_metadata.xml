@@ -1,0 +1,11 @@
+<App
+    FileStorageResolver="DefaultStorageResolver"
+    StartupController="ViewController">
+    
+    <WaitBox
+        Type="FullScreenWaitBox"
+        Color="00005AA1"
+        TentativeTimeInMilliseconds="300"
+    />
+    
+</App>
