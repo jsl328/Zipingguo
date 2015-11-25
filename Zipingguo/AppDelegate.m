@@ -30,6 +30,8 @@
      NSLog(@"沙盒路径%@",documentsDirectory);
      NSLog(@"沙盒路径%@",documentsDirectory);
     
+    NSLog(@"saffsadfljskld盒路径%@",documentsDirectory);
+    
     [self easemobApplication:application didFinishLaunchingWithOptions:launchOptions];
     
     IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
